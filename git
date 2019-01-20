@@ -1,0 +1,15 @@
+# Git
+
+## Config
+
+- sudo pacman -Sy git
+- git config --global user.name "name"
+- git config --global user.email "abc@xxx.com"
+- ssh-keygen -t rsa -C "abc@xxx.com"
+
+## Usage
+
+- git init
+- git add -A
+- git remote add origin git@github.com:ZTook/projectname.git
+- git push -u origin master

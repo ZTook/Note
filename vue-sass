@@ -1,0 +1,96 @@
+# Vue-sass
+
+## vue使用sass
+
+  npm install --save-dev sass-loader
+
+  npm install --save-dev node-sass
+
+## style标签如下
+
+  `<style lang="sass">`
+
+## 引用sass/scss文件
+
+  `@import "./common/scss/mixin"`
+
+## 变量声明、引用&划线
+
+  ```
+  $highlight-color/$highlight_color:#F90
+  .selected{
+    border:1px solid $highlight-color
+  }
+  ```
+
+## 嵌套CSS规则
+  ```
+  #content article h1 { color: #333 }
+  #content article p { margin-bottom: 1.4em }
+  #content aside { background: #EEE }
+  ```
+  等同于
+  ```
+  #content {
+    article {
+      h1 { color: #333 }
+      p { margin-bottom: 1.4em }
+    }
+    aside { background-color: #EEE }
+  }
+  ```
+## 添加伪类时
+  ```
+  article a { color: bule }
+
+  article a:hover { color: red }
+  ```
+  等同于
+  ```
+  article a {
+    color: blue;
+    &:hover { color: red }
+  }
+  ```
+## 可在sass中配合使用>/+/~
+## 属性嵌套
+  ```
+  nav {
+    border: {
+      style: solid;
+      width: 1px;
+      color: #ccc;
+    }
+  }
+  ```
+## 原生CSS导入
+
+  导入原生CSS时，须将CSS后缀改为.sass
+
+## 注释
+  ```
+  //  /**/
+  ```
+
+## 混合器
+  ```
+  @mixin link-colors($normal, $hover){
+    color: $normal;
+    &:hover { color: $hover; }
+  }
+
+  a {
+    @include link-colors(bule, red)
+  }
+  ```
+## 继承
+  ```
+  .error {
+    border: 1px solid red;
+    background-color: #fdd;
+  }
+  .seriousError {
+    @extend .error;
+    border-width: 3px;
+  }
+  ```

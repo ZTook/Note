@@ -1,0 +1,27 @@
+# Manjaro
+
+## Install
+1. Download the furus
+2. Select the image method of DD
+3. Install the Manjaro
+
+## config
+### Input Method
+4. Do:sudo pacman -Sy fcitx-im fcitx-configtool fcitx-googlepinyin
+5. Do:sudo nano ~/.xprofile
+
+   export GTK_IM_MODULE=fcitx
+
+   export QT_IM_MODULE=fcitx
+
+   export XMODIFIERS="@im=fcitx"
+6. Do:sudo pacman -Sy wqy-microhei
+
+### Tool
+7. Do:sudo pacman -Sy yaourt
+8. Do:yaourt -S atom
+9. Do:yaourt -S visual-studio-code-bin
+
+### Desktop
+
+10. Set the bottom bar panel unclock and then move it to the top
